@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>JIC</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,500,600&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="App_Themes/JIC/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="App_Themes/JIC/style.css">
+</head>
+<body>
+<div class="header">
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="logo">
+                        <a href="/"><img src="JIC/media/Images/jic-logo.png" alt="JIC"></a>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="mobile">
+                        <div class="mobile-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="header-block">
+                        <div class="header-top-container">
+                            <div class="searchBox">
+                                <label class="lbSearch">Search</label>
+                                <input type="text" maxlength="1000" class="tbSearch form-control"/>
+                                <input type="submit" value="" class="btnSearch btn btn-default"/>
+                            </div>
+                            <div class="header-links">
+                                <a class="link" href="/">Login</a>
+                                <span></span>
+                                <a class="link" href="/">Sign Up</a>
+                            </div>
+                            <div class="header-social">
+                                <a class="facebook" href="/">&nbsp;</a>
+                                <a class="twitter" href="/">&nbsp;</a>
+                            </div>
+                        </div>
+                        <ul class="header-menu">
+                            <li><a href="live.html">Live</a></li>
+                            <li><a href="study.html">Study</a></li>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="stories.html">Stories</a></li>
+                            <li><a href="where-to-go-next.html">Where to go next</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /*#EU cookies#*/
+    .eu-cookies {
+        position: fixed;
+        display: block;
+        /*left: 0;*/
+        left: 110px;
+        bottom: 25px;
+        width: 100%;
+        text-align: left;
+        color: #fff;
+        background-color: #1d283f !important;
+        z-index: 1000;
+        padding: 15px;
+        line-height: 120%;
+    }
+
+    .eu-cookies a {
+        color: #BC1820;
+        font-weight: 600;
+    }
+
+    .ConsentButtons {
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background: white;
+        padding-top: 8px;
+    }
+
+    .ConsentText {
+        font-weight: 400;
+        padding-top: 11px;
+    }
+
+    .ConsentButtons input {
+        position: relative;
+        /* top: -11px; */
+        /* right: 128px; */
+        height: 26px;
+        z-index: 15;
+        border: 0;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #1e2941;
+        border-bottom: 2px solid #d91416;
+        /* margin: 24px 18px 30px 18px; */
+        padding: 0;
+        /* padding-bottom: 7px; */
+        outline: none;
+    }
+
+    .ConsentButtons input:after {
+        position: absolute;
+        left: 0;
+        content: '';
+        height: 2px;
+        background: #d91416;
+        transition: all 0.2s linear;
+        width: 100%;
+        bottom: -3px;
+    }
+
+    .cookie-man {
+        background: url('cookie.png') no-repeat;
+        z-index: 1001;
+        width: 100px;
+        height: 100px;
+        float: left;
+        position: absolute;
+        left: -36px;
+        top: -20px;
+    }
+
+    .CookieConsent {
+        padding-right: 105px;
+        padding-left: 30px;
+        /* max-width: 80%; */
+    }
+
+    .ConsentButtons {
+        margin-top: 10px;
+        float: right;
+    }
+
+    .btn-default:hover {
+        color: #333;
+        background-color: white;
+        border-color: white;
+    }
+
+    @media (max-width: 576px) {
+        .eu-cookies {
+            left: 0;
+        }
+        .cookie-man{
+            display: none;
+        }
+        .CookieConsent {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .ConsentButtons{
+            margin-top: 35px;
+        }
+    }
+
+</style>
+<div class="eu-cookies">
+    <div class="cookie-man"></div>
+
+    <div class="CookieConsent">
+        <span class="ConsentText">This website uses cookies to ensure you get the best experience on our website.
+            <a href="cookie-statement.html">Learn more</a>
+        </span>
+        <span class="ConsentButtons">
+            <input type="submit" value="OK, GOT IT!" class="btnNewsletter btn btn-default ConsentButton">
+            <!--<input type="submit" value="OK, GOT IT!" class="ConsentButton btn btn-default">-->
+        </span>
+    </div>
+
+</div>
+
+<div class="content">
+    <div class="container">
+        <br/><br/><br/><br/><br/>
+        <ul>
+            <li><a href="homepage.html">Homepage</a></li>
+            <li><a href="homepage-retina.html">Homepage retina</a></li>
+            <li><a href="homepage-video.html">Homepage video</a></li>
+            <li><a href="homepage-carousel.html">Homepage carousel</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="news-detail-image.html">News detail image</a></li>
+            <li><a href="news-detail.html">News detail</a></li>
+            <li><a href="where-to-go-next.html">Where to go next</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li><a href="study.html">Study</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="social-wall.html">Social Wall</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="toolbox.html">Toolbox</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="coverflow.html">Coverflow</a></li>
+            <li><a href="#" class="modal-btn" data-item="modal-thank">Newsletter popup</a></li>
+            <li><a href="404.html">404</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup-step1.html">Sign Up (STEP 1)</a></li>
+            <li><a href="signup-step2.html">Sign Up (STEP 2)</a></li>
+            <li><a href="user-preferences.html">User Preferences</a></li>
+            <li><a href="user-dashboard.html">User Dashboard</a></li>
+        </ul>
+        <br/><br/><br/><br/>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="footer-in">
+            <div class="separator separator-left separator-top"><img src="JIC/media/Images/footer.png" alt=""/></div>
+            <div class="row">
+                <div class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-5">
+                    <ul class="footer-links">
+                        <li><a href="get-to-know.html">get to know</a></li>
+                        <li><a href="live.html">Live</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="study.html">Study</a></li>
+                        <li><a href="social-wall.html">Social wall</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="imagebank.html">Imagebank</a></li>
+                        <li><a href="where-to-go-next.html">Where to go next</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-md-push-1 col-sm-4 col-sm-push-1">
+                    <div class="footer-social">
+                        <h3>Follow Us</h3>
+                        <a class="facebook" href="/">&nbsp;</a>
+                        <a class="twitter" href="/">&nbsp;</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-push-1 col-sm-12">
+                    <div class="footer-newsletter">
+                        <h3>Stay tuned for newsletter</h3>
+                        <div>
+                            <input type="text" maxlength="1000" class="tbNewsletter form-control"/>
+                            <input type="submit" value="Subscribe" class="btnNewsletter btn btn-default"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-12 col-md-push-1 copyright"><span>&copy; 2017 - Jihomoravské Inovační Centrum</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- The Modal -->
+<div class="modal-thank modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-body">
+            <span class="close"></span>
+            <div class="title">Thank you!</div>
+            <p>Thank you for your interest. You are now subscribed.<br>Stay tuned for great updates from Brno region.
+            </p>
+        </div>
+    </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="CMSScripts/JIC/jquery.dd.min.js" type="text/javascript"></script>
+<script src="CMSScripts/JIC/carousel.min.js" type="text/javascript"></script>
+<script src="CMSScripts/JIC/fancybox.min.js" type="text/javascript"></script>
+<script src="CMSScripts/JIC/yt-video.js" type="text/javascript"></script>
+<script src="CMSScripts/JIC/main.js?v=1" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+        @import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900');
+
+
+        @media screen {
+
+            /* latin */
+            @font-face {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Montserrat-Regular'), url(http://fonts.gstatic.com/s/montserrat/v7/zhcz-_WihjSQC0oHJ9TCYPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Montserrat-Bold'), url(http://fonts.gstatic.com/s/montserrat/v7/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 300;
+                src: local('Oswald Light'), local('Oswald-Light'), url(http://fonts.gstatic.com/s/oswald/v11/l1cOQ90roY9yC7voEhngDBJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 300;
+                src: local('Oswald Light'), local('Oswald-Light'), url(http://fonts.gstatic.com/s/oswald/v11/HqHm7BVC_nzzTui2lzQTDVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Oswald Regular'), local('Oswald-Regular'), url(http://fonts.gstatic.com/s/oswald/v11/yg0glPPxXUISnKUejCX4qfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Oswald Regular'), local('Oswald-Regular'), url(http://fonts.gstatic.com/s/oswald/v11/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Oswald Bold'), local('Oswald-Bold'), url(http://fonts.gstatic.com/s/oswald/v11/dI-qzxlKVQA6TUC5RKSb3xJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Oswald Bold'), local('Oswald-Bold'), url(http://fonts.gstatic.com/s/oswald/v11/bH7276GfdCjMjApa_dkG6VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+
+            @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 300;
+                src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+            }
+
+            @font-face {
+                font-family: "Open Sans";
+                font-weight: 400;
+                font-style: italic;
+
+                src: url(//fonts.gstatic.com/s/opensans/v13/xjAJXh38I15wypJXxuGMBmfQcKutQXcIrRfyR5jdjY8.eot?#) format("eot");
+            }
+        }
+
+        body, table, td, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        .em_blue a {
+            color: #4285f4;
+            text-decoration: none;
+        }
+
+        .em_gray a {
+            color: #888b8d;
+            text-decoration: none;
+        }
+
+        .em_gray2 a {
+            color: #b1b1b1;
+            text-decoration: none;
+        }
+
+        .em_wht a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .em_footer a {
+            color: #999999;
+            text-decoration: none;
+        }
+
+        @media screen and (min-width: 601px) {
+            .container {
+                width: 600px !important;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .em_wrapper {
+                width: 100% !important;
+            }
+
+            .em_hide {
+                display: none !important;
+            }
+
+            .em_center {
+                text-align: center !important;
+            }
+
+            .em_font1 {
+                font-size: 34px !important;
+                padding: 20px 0 !important;
+            }
+
+            .em_padtop {
+                padding-top: 25px !important;
+            }
+
+            .em_p1 {
+                padding-bottom: 35px !important;
+            }
+
+            .line{
+                border-top: 1px solid #dfe5e8;
+            }
+        }
+
+        div[style*="margin: 14px 0;"] {
+            margin: 0 !important;
+        }
+    </style>
+</head>
+<body style="background-color: #ffffff; margin: 0 !important; padding: 0 !important;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <!--header-->
+    <tr>
+        <td align="center" valign="top">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                    <td align="center" valign="top" width="600">
+            <![endif]-->
+            <table align="center" class="container" border="0" cellpadding="0" cellspacing="0" width="100%"
+                   style="max-width: 600px;">
+                <tr>
+                    <td align="center" valign="top" style="padding:25px 0; font-size:0px; line-height:0px;">
+                        <a href="#" target="_blank" style="text-decoration:none;">
+                            <img src="JIC/media/Images/jic-logo.png" alt="JIC-brnoregion" border="0"/>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="top" style="padding:25px 0; font-size:0px; line-height:0px;">
+                        <span style="font-size: 16px;font-weight: 400;font-family: 'Work Sans',Helvetica,Arial,sans-serif;color: #869196;line-height: 22px;">Oslovení <span>Jméno příjmení</span> lorem ipsum doloquitas.</span>
+                    </td>
+                </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>
+    <!--content 1-->
+    <tr>
+        <td align="center" valign="top" bgcolor="#fafafa" style="padding-top: 40px;">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                    <td align="center" valign="top" width="600">
+            <![endif]-->
+            <table align="center" class="container" border="0" cellpadding="0" cellspacing="0" width="100%"
+                   style="max-width: 600px;">
+                <tr>
+                    <td align="right" valign="top">
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table align="right" border="0" cellspacing="0" cellpadding="0" width="568">
+                            <tr>
+                                <td align="right" valign="top" width="568">
+                        <![endif]-->
+                        <table align="right" border="0" cellpadding="0" cellspacing="0" width="100%"
+                               style="max-width:568px;">
+                            <tr>
+                                <td align="center" valign="top" style="padding-bottom:50px;">
+                                    <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td align="center" valign="top" style="font-size:0;">
+                                                <!--[if (gte mso 9)|(IE)]>
+                                                <table align="center" border="0" cellspacing="0" cellpadding="0"
+                                                       width="568">
+                                                    <tr>
+                                                        <td align="left" valign="top" width="303">
+                                                <![endif]-->
+                                                <div style="display:inline-block; max-width:303px; vertical-align:top; width:100%;">
+                                                    <table align="left" border="0" cellpadding="0" cellspacing="0"
+                                                           width="100%" style="max-width:303px;">
+                                                        <tr>
+                                                            <td align="left" valign="top">
+                                                                <table width="303" align="left" cellpadding="0"
+                                                                       cellspacing="0" border="0" class="em_wrapper">
+                                                                    <tr>
+                                                                        <td width="21" class="em_hide">&nbsp;</td>
+                                                                        <td align="center" valign="top"><img
+                                                                                src="JIC/media/Images/uspdetail01.png"
+                                                                                width="261"
+                                                                                height="386" alt="" border="0"
+                                                                                style="display:block;"/></td>
+                                                                        <td width="21" class="em_hide">&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                                                </td>
+                                                <td align="left" valign="top" width="265">
+                                                <![endif]-->
+                                                <div style="display:inline-block; max-width:265px; vertical-align:top; width:100%; text-align:left;">
+                                                    <table align="left" border="0" cellpadding="0" cellspacing="0"
+                                                           width="100%" style="max-width:265px;">
+                                                        <tr>
+                                                            <td align="left" valign="top">
+                                                                <table width="265" align="center" cellpadding="0"
+                                                                       cellspacing="0" border="0" class="em_wrapper">
+                                                                    <tr>
+                                                                        <td width="21">&nbsp;</td>
+                                                                        <td align="center" valign="top"
+                                                                            class="em_padtop">
+                                                                            <table width="100%" align="center"
+                                                                                   cellpadding="0" cellspacing="0"
+                                                                                   border="0">
+                                                                                <tr>
+                                                                                    <td align="left" class=""
+                                                                                        style="color: #027eff;font-family: 'Oswald', sans-serif;text-transform: uppercase;letter-spacing: 3px;font-weight: 500;display: inline-block;font-size: 14px;padding-bottom:15px">
+                                                                                        <span class="em_blue">HISTORY</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" class=""
+                                                                                        style="padding-bottom:15px;font-family: 'Oswald', sans-serif;text-transform: uppercase;font-weight: 500;letter-spacing: 3px;color: #1e2941;font-size: 24px;">
+                                                                                        <span class="em_gray">Delší název článku je název článku?</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" class=""
+                                                                                        style="font-size: 16px;font-weight: 400;font-family: 'Work Sans',Helvetica,Arial,sans-serif;color: #869196;">
+                                                                                        <span class="em_gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate risus odio, a mattis orci dignissim vitae. Mauris suscipit efficitur nulla sed hendrerit.</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" valign="top"
+                                                                                        style="padding-bottom:15px; padding-top:15px;">
+                                                                                        <table align="left"
+                                                                                               cellpadding="0"
+                                                                                               cellspacing="0"
+                                                                                               border="0"
+                                                                                               class="em_wrapper">
+                                                                                            <tr>
+                                                                                                <td align="center"
+                                                                                                    valign="top">
+                                                                                                    <table align="center"
+                                                                                                           cellpadding="0"
+                                                                                                           cellspacing="0"
+                                                                                                           border="0">
+                                                                                                        <tr>
+                                                                                                            <td align="center"
+                                                                                                                valign="middle"
+                                                                                                                class="em_wht"
+                                                                                                                bgcolor="#4285f4"
+                                                                                                                style="font-size: 13px; font-family:'Lato', Arial, sans-serif;background-color: transparent;">
+                                                                                                                <a href="#"
+                                                                                                                   target="_blank"
+                                                                                                                   style="font-family: 'Oswald', sans-serif;font-size: 16px;text-transform: uppercase;letter-spacing: 3px;font-weight: 500;color: #1e2941;border-bottom: 2px solid currentColor;border-bottom-color: #869196;position: relative;display: inline-block;">
+                                                                                                                    READ MORE</a>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                        <td width="21">&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                                                </td>
+                                                </tr>
+                                                </table>
+                                                <![endif]-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                    </td>
+                </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>
+    <!--content 2-->
+    <tr class="line">
+        <td align="center" valign="top" bgcolor="#fafafa">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                    <td align="center" valign="top" width="600">
+            <![endif]-->
+            <table align="center" class="container" border="0" cellpadding="0" cellspacing="0" width="100%"
+                   style="max-width: 600px;">
+                <tr>
+                    <td align="right" valign="top">
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table align="right" border="0" cellspacing="0" cellpadding="0" width="568">
+                            <tr>
+                                <td align="right" valign="top" width="568">
+                        <![endif]-->
+                        <table align="right" border="0" cellpadding="0" cellspacing="0" width="100%"
+                               style="max-width:568px;">
+                            <tr>
+                                <td align="center" valign="top" style="padding-bottom:50px;">
+                                    <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td align="center" valign="top" style="font-size:0;">
+                                                <!--[if (gte mso 9)|(IE)]>
+                                                <table align="center" border="0" cellspacing="0" cellpadding="0"
+                                                       width="568">
+                                                    <tr>
+                                                        <td align="left" valign="top" width="303">
+                                                <![endif]-->
+                                                <div style="display:inline-block; max-width:265px; vertical-align:top; width:100%; text-align:left;">
+                                                    <table align="left" border="0" cellpadding="0" cellspacing="0"
+                                                           width="100%" style="max-width:265px;">
+                                                        <tr>
+                                                            <td align="left" valign="top">
+                                                                <table width="265" align="center" cellpadding="0"
+                                                                       cellspacing="0" border="0" class="em_wrapper">
+                                                                    <tr>
+                                                                        <td width="21">&nbsp;</td>
+                                                                        <td align="center" valign="top"
+                                                                            class="em_padtop">
+                                                                            <table width="100%" align="center"
+                                                                                   cellpadding="0" cellspacing="0"
+                                                                                   border="0">
+                                                                                <tr>
+                                                                                    <td align="left" class=""
+                                                                                        style="color: #d71e2c;font-family: 'Oswald', sans-serif;text-transform: uppercase;letter-spacing: 3px;font-weight: 500;display: inline-block;font-size: 14px;padding-bottom:15px">
+                                                                                        <span class="em_blue">CATEGORY</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" class=""
+                                                                                        style="padding-bottom:15px;font-family: 'Oswald', sans-serif;text-transform: uppercase;font-weight: 500;letter-spacing: 3px;color: #1e2941;font-size: 24px;">
+                                                                                        <span class="em_gray">Delší název článku je název článku?</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" class=""
+                                                                                        style="font-size: 16px;font-weight: 400;font-family: 'Work Sans',Helvetica,Arial,sans-serif;color: #869196;">
+                                                                                        <span class="em_gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate risus odio, a mattis orci dignissim vitae. Mauris suscipit efficitur nulla sed hendrerit.</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" valign="top"
+                                                                                        style="padding-bottom:15px; padding-top:15px;">
+                                                                                        <table align="left"
+                                                                                               cellpadding="0"
+                                                                                               cellspacing="0"
+                                                                                               border="0"
+                                                                                               class="em_wrapper">
+                                                                                            <tr>
+                                                                                                <td align="center"
+                                                                                                    valign="top">
+                                                                                                    <table align="center"
+                                                                                                           cellpadding="0"
+                                                                                                           cellspacing="0"
+                                                                                                           border="0">
+                                                                                                        <tr>
+                                                                                                            <td align="center"
+                                                                                                                valign="middle"
+                                                                                                                class="em_wht"
+                                                                                                                bgcolor="#4285f4"
+                                                                                                                style="font-size: 13px; font-family:'Lato', Arial, sans-serif;background-color: transparent;">
+                                                                                                                <a href="#"
+                                                                                                                   target="_blank"
+                                                                                                                   style="font-family: 'Oswald', sans-serif;font-size: 16px;text-transform: uppercase;letter-spacing: 3px;font-weight: 500;color: #1e2941;border-bottom: 2px solid currentColor;border-bottom-color: #869196;position: relative;display: inline-block;">
+                                                                                                                    READ MORE</a>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                        <td width="21">&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                                                </td>
+                                                <td align="left" valign="top" width="265">
+                                                <![endif]-->
+                                                <div style="display:inline-block; max-width:303px; vertical-align:top; width:100%;">
+                                                    <table align="left" border="0" cellpadding="0" cellspacing="0"
+                                                           width="100%" style="max-width:303px;">
+                                                        <tr>
+                                                            <td align="left" valign="top">
+                                                                <table width="303" align="left" cellpadding="0"
+                                                                       cellspacing="0" border="0" class="em_wrapper">
+                                                                    <tr>
+                                                                        <td width="21" class="em_hide">&nbsp;</td>
+                                                                        <td align="center" valign="top"><img
+                                                                                src="JIC/media/Images/uspdetail02.png"
+                                                                                width="261"
+                                                                                height="386" alt="" border="0"
+                                                                                style="display:block;"/></td>
+                                                                        <td width="21" class="em_hide">&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                                                </td>
+                                                </tr>
+                                                </table>
+                                                <![endif]-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                    </td>
+                </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>
+    <!--content 3-->
+    <tr class="line">
+        <td align="center" valign="top" bgcolor="#fafafa" style="padding-top: 40px;">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                    <td align="center" valign="top" width="600">
+            <![endif]-->
+            <table align="center" class="container" border="0" cellpadding="0" cellspacing="0" width="100%"
+                   style="max-width: 600px;">
+                <tr>
+                    <td align="right" valign="top">
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table align="right" border="0" cellspacing="0" cellpadding="0" width="568">
+                            <tr>
+                                <td align="right" valign="top" width="568">
+                        <![endif]-->
+                        <table align="right" border="0" cellpadding="0" cellspacing="0" width="100%"
+                               style="max-width:568px;">
+                            <tr>
+                                <td align="center" valign="top" style="padding-bottom:50px;">
+                                    <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td align="center" valign="top" style="font-size:0;">
+                                                <!--[if (gte mso 9)|(IE)]>
+                                                <table align="center" border="0" cellspacing="0" cellpadding="0"
+                                                       width="568">
+                                                    <tr>
+                                                        <td align="left" valign="top" width="303">
+                                                <![endif]-->
+                                                <div style="display:inline-block; max-width:303px; vertical-align:top; width:100%;">
+                                                    <table align="left" border="0" cellpadding="0" cellspacing="0"
+                                                           width="100%" style="max-width:303px;">
+                                                        <tr>
+                                                            <td align="left" valign="top">
+                                                                <table width="303" align="left" cellpadding="0"
+                                                                       cellspacing="0" border="0" class="em_wrapper">
+                                                                    <tr>
+                                                                        <td width="21" class="em_hide">&nbsp;</td>
+                                                                        <td align="center" valign="top"><img
+                                                                                src="JIC/media/Images/uspdetail03.png"
+                                                                                width="261"
+                                                                                height="386" alt="" border="0"
+                                                                                style="display:block;"/></td>
+                                                                        <td width="21" class="em_hide">&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                                                </td>
+                                                <td align="left" valign="top" width="265">
+                                                <![endif]-->
+                                                <div style="display:inline-block; max-width:265px; vertical-align:top; width:100%; text-align:left;">
+                                                    <table align="left" border="0" cellpadding="0" cellspacing="0"
+                                                           width="100%" style="max-width:265px;">
+                                                        <tr>
+                                                            <td align="left" valign="top">
+                                                                <table width="265" align="center" cellpadding="0"
+                                                                       cellspacing="0" border="0" class="em_wrapper">
+                                                                    <tr>
+                                                                        <td width="21">&nbsp;</td>
+                                                                        <td align="center" valign="top"
+                                                                            class="em_padtop">
+                                                                            <table width="100%" align="center"
+                                                                                   cellpadding="0" cellspacing="0"
+                                                                                   border="0">
+                                                                                <tr>
+                                                                                    <td align="left" class=""
+                                                                                        style="color: #f7ad1f;font-family: 'Oswald', sans-serif;text-transform: uppercase;letter-spacing: 3px;font-weight: 500;display: inline-block;font-size: 14px;padding-bottom:15px">
+                                                                                        <span class="em_blue">ART & CULTURE</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" class=""
+                                                                                        style="padding-bottom:15px;font-family: 'Oswald', sans-serif;text-transform: uppercase;font-weight: 500;letter-spacing: 3px;color: #1e2941;font-size: 24px;">
+                                                                                        <span class="em_gray">Delší název článku je název článku?</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" class=""
+                                                                                        style="font-size: 16px;font-weight: 400;font-family: 'Work Sans',Helvetica,Arial,sans-serif;color: #869196;">
+                                                                                        <span class="em_gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate risus odio, a mattis orci dignissim vitae. Mauris suscipit efficitur nulla sed hendrerit.</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" valign="top"
+                                                                                        style="padding-bottom:15px; padding-top:15px;">
+                                                                                        <table align="left"
+                                                                                               cellpadding="0"
+                                                                                               cellspacing="0"
+                                                                                               border="0"
+                                                                                               class="em_wrapper">
+                                                                                            <tr>
+                                                                                                <td align="center"
+                                                                                                    valign="top">
+                                                                                                    <table align="center"
+                                                                                                           cellpadding="0"
+                                                                                                           cellspacing="0"
+                                                                                                           border="0">
+                                                                                                        <tr>
+                                                                                                            <td align="center"
+                                                                                                                valign="middle"
+                                                                                                                class="em_wht"
+                                                                                                                bgcolor="#4285f4"
+                                                                                                                style="font-size: 13px; font-family:'Lato', Arial, sans-serif;background-color: transparent;">
+                                                                                                                <a href="#"
+                                                                                                                   target="_blank"
+                                                                                                                   style="font-family: 'Oswald', sans-serif;font-size: 16px;text-transform: uppercase;letter-spacing: 3px;font-weight: 500;color: #1e2941;border-bottom: 2px solid currentColor;border-bottom-color: #869196;position: relative;display: inline-block;">
+                                                                                                                    READ MORE</a>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                        <td width="21">&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                                                </td>
+                                                </tr>
+                                                </table>
+                                                <![endif]-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                    </td>
+                </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>
+    <!--footer-->
+    <tr>
+        <td align="center" valign="top" bgcolor="white">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                    <td align="center" valign="top" width="600">
+            <![endif]-->
+            <table align="center" class="container" border="0" cellpadding="0" cellspacing="0" width="100%"
+                   style="max-width: 600px;">
+                <tr>
+                    <td align="center" valign="top" style="padding:40px 20px;">
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+
+                            <tr>
+                                <td align="center" valign="top" style="padding-bottom:8px;">
+                                    <table align="center" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td align="right" width="110" class="em_footer"
+                                                style="font-size: 15px;font-weight: 400;font-family: 'Work Sans',Helvetica,Arial,sans-serif;color: #869196;line-height: 22px;">
+                                                <a href="mailto:hello@email.com"
+                                                   style="text-decoration:none; color:#999999;">info@brnoregion.com</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center" valign="top">
+                                    <table align="center" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td align="right" width="110" class="em_footer"
+                                                style="font-size: 15px;font-weight: 400;font-family: 'Work Sans',Helvetica,Arial,sans-serif;color: #869196;line-height: 22px;">
+                                                <a href="#" target="_blank"
+                                                   style="text-decoration:none; color:#999999;">Privacy&nbsp&amp;&nbspTerms</a>
+                                            </td>
+                                            <td width="10"></td>
+                                            <td width="1" bgcolor="#999999"></td>
+                                            <td width="10"></td>
+                                            <td align="left" width="100" class="em_footer"
+                                                style="font-size: 15px;font-weight: 400;font-family: 'Work Sans',Helvetica,Arial,sans-serif;color: #869196;line-height: 22px;">
+                                                <a href="#" target="_blank"
+                                                   style="text-decoration:none; color:#999999;">Unsubscribe</a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
