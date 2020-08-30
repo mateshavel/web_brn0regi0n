@@ -1,0 +1,375 @@
+.notransition {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+/*COVERFLOW #BRNOREGION STORIES */
+#coverflow-stories {
+    max-width: 80%;
+    height: 533px;
+    background: rgba(0, 0, 0, 0);
+    position: relative;
+    margin: 0 auto;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: solid 0;
+    padding-bottom: 30px;
+}
+
+#coverflow-stories .covers {
+    width: 100%;
+    height: 100%;
+    min-height: 533px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+}
+
+#coverflow-stories ul {
+    /*top: 55.5px;*/
+    width: 5000px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    -webkit-transform: translate3d(361px, 0, 0);
+    transform: translate3d(361px, 0, 0);
+}
+
+#coverflow-stories li {
+    width: 100px;
+    list-style: none;
+    float: left;
+    -webkit-transition: margin 0.5s ease, -webkit-transform 0.5s ease;
+    transition: margin 0.5s ease, transform 0.5s ease;
+    position: relative;
+    pointer-events: none;
+}
+
+#coverflow-stories .imgdiv {
+    width: 278px;
+    min-height: 490px;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    pointer-events: auto;
+    position: relative;
+    display: block;
+    /*box-shadow: 30px 5px 15px -10px rgba(0,0,0,0.15), -30px 5px 15px -10px rgba(0,0,0,0.15);*/
+    box-shadow: 17px 19px 40px -15px rgba(0,0,0,0.15), -20px 19px 25px -22px rgba(0,0,0,0.15);
+    background-color: #fff;
+    /*padding-bottom: 30px;*/
+}
+
+#coverflow-stories .imgdiv img {
+    width: 278px;
+    display: block;
+}
+
+#coverflow-stories .refl {
+    display: none;
+    position: absolute;
+    top: 100%;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    opacity: 0.5;
+}
+/*
+#coverflow-stories .refl img {
+    display: block;
+}
+
+#coverflow-stories .refl::before {
+    content: "";
+    position: absolute;
+    width: 102%;
+    margin-left: -1%;
+    height: 100%;
+    box-shadow: inset #fff 0 211.28px 50px;
+}
+*/
+/*
+#coverflow-stories .text {
+    position: absolute;
+    bottom: -55.5px;
+    top: 211.891px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.3);
+    width: 417px;
+    margin-left: -69.5px;
+    color: rgb(255, 255, 255);
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}*/
+
+#coverflow-stories .text p {
+    margin: 5px;
+    position: relative;
+    text-align: center;
+}
+
+#coverflow-stories li:nth-child(-n+1) .imgdiv,
+#coverflow-stories ul li .leftItems {
+    -webkit-transform: perspective(600px) rotateY(20deg);
+    transform: perspective(600px) rotateY(20deg);
+    opacity: 0.2;
+}
+
+#coverflow-stories li:nth-child(n+3) .imgdiv,
+#coverflow-stories ul li .rightItems {
+    -webkit-transform: perspective(600px) rotateY(-20deg);
+    transform: perspective(600px) rotateY(-20deg);
+    opacity: 0.2;
+}
+
+#coverflow-stories ul li .straight {
+    -webkit-transform: rotateY(0deg) scale(1);
+    transform: rotateY(0deg) scale(1) !important;
+    opacity: 1 !important;
+    transition: opacity 0.75s;
+}
+
+#coverflow-stories li:nth-child(-n+1),
+#coverflow-stories ul li.leftLI {
+    -webkit-transform: translate3d(-140px, 0, 0);
+    transform: translate3d(-140px, 0, 0) scale(0.9);
+}
+
+#coverflow-stories li:nth-child(n+3),
+#coverflow-stories ul li.rightLI {
+    -webkit-transform: translate3d(140px, 0, 0);
+    transform: translate3d(140px, 0, 0) scale(0.9);
+}
+
+#coverflow-stories ul .straightLI {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+#coverflow-stories .imgdiv a,
+#coverflow-stories .text {
+    cursor: pointer;
+    /*grab cursor available for all browsers except IE (we can use external .cur file but uses too much CPU)*/
+    /*cursor: -webkit-grab;
+    cursor: grab;*/
+    margin-bottom: 10px;
+}
+
+#coverflow-stories .imgdiv a {
+    padding: 20px;
+}
+
+#coverflow-stories .Preloader {
+    /*none - autoplay:false ; block - autoplay:true*/
+    display: none;
+}
+
+#coverflow-stories .Lightbox {
+    display: none;
+}
+
+#coverflow-stories li:nth-child(2) .text,
+#coverflow-stories li:nth-child(-n+1) .text,
+#coverflow-stories li:nth-child(n+3) .text {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/*COVERFLOW SOCIAL WALL */
+#coverflow-socialwall {
+    max-width: 80%;
+    height: 533px;
+    background: rgba(0, 0, 0, 0);
+    position: relative;
+    margin: 0 auto;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: solid 0;
+    padding-bottom: 30px;
+}
+
+#coverflow-socialwall .covers {
+    width: 100%;
+    height: 100%;
+    min-height: 533px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+}
+
+#coverflow-socialwall ul {
+    /*top: 55.5px;*/
+    width: 5000px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    -webkit-transform: translate3d(361px, 0, 0);
+    transform: translate3d(361px, 0, 0);
+}
+
+#coverflow-socialwall li {
+    width: 100px;
+    list-style: none;
+    float: left;
+    -webkit-transition: margin 0.5s ease, -webkit-transform 0.5s ease;
+    transition: margin 0.5s ease, transform 0.5s ease;
+    position: relative;
+    pointer-events: none;
+}
+
+#coverflow-socialwall .imgdiv {
+    width: 278px;
+    min-height: 490px;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    pointer-events: auto;
+    position: relative;
+    display: block;
+    /*box-shadow: 30px 5px 15px -10px rgba(0,0,0,0.15), -30px 5px 15px -10px rgba(0,0,0,0.15);*/
+    box-shadow: 17px 19px 40px -15px rgba(0,0,0,0.15), -20px 19px 25px -22px rgba(0,0,0,0.15);
+    background-color: #fff;
+    /*padding-bottom: 30px;*/
+}
+
+#coverflow-socialwall .imgdiv img {
+    width: 70px;
+    display: block;
+}
+
+#coverflow-socialwall .refl {
+    display: none;
+    position: absolute;
+    top: 100%;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    opacity: 0.5;
+}
+/*
+#coverflow-socialwall .refl img {
+    display: block;
+}
+
+#coverflow-socialwall .refl::before {
+    content: "";
+    position: absolute;
+    width: 102%;
+    margin-left: -1%;
+    height: 100%;
+    box-shadow: inset #fff 0 211.28px 50px;
+}
+*/
+/*
+#coverflow-socialwall .text {
+    position: absolute;
+    bottom: -55.5px;
+    top: 211.891px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.3);
+    width: 417px;
+    margin-left: -69.5px;
+    color: rgb(255, 255, 255);
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}*/
+
+#coverflow-socialwall .text p {
+    margin: 5px;
+    position: relative;
+    text-align: center;
+}
+
+#coverflow-socialwall li:nth-child(-n+1) .imgdiv,
+#coverflow-socialwall ul li .leftItems {
+    -webkit-transform: perspective(600px) rotateY(20deg);
+    transform: perspective(600px) rotateY(20deg);
+    opacity: 0.2;
+}
+
+#coverflow-socialwall li:nth-child(n+3) .imgdiv,
+#coverflow-socialwall ul li .rightItems {
+    -webkit-transform: perspective(600px) rotateY(-20deg);
+    transform: perspective(600px) rotateY(-20deg);
+    opacity: 0.2;
+}
+
+#coverflow-socialwall ul li .straight {
+    -webkit-transform: rotateY(0deg) scale(1);
+    transform: rotateY(0deg) scale(1) !important;
+    opacity: 1 !important;
+    transition: opacity 0.75s;
+}
+
+#coverflow-socialwall li:nth-child(-n+1),
+#coverflow-socialwall ul li.leftLI {
+    -webkit-transform: translate3d(-140px, 0, 0);
+    transform: translate3d(-140px, 0, 0) scale(0.9);
+}
+
+#coverflow-socialwall li:nth-child(n+3),
+#coverflow-socialwall ul li.rightLI {
+    -webkit-transform: translate3d(140px, 0, 0);
+    transform: translate3d(140px, 0, 0) scale(0.9);
+}
+
+#coverflow-socialwall ul .straightLI {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+#coverflow-socialwall .imgdiv a,
+#coverflow-socialwall .text {
+    cursor: pointer;
+    /*grab cursor available for all browsers except IE (we can use external .cur file but uses too much CPU)*/
+    /*cursor: -webkit-grab;
+    cursor: grab;*/
+    margin-bottom: 10px;
+}
+
+#coverflow-socialwall .imgdiv a {
+    padding: 20px;
+}
+
+#coverflow-socialwall .Preloader {
+    /*none - autoplay:false ; block - autoplay:true*/
+    display: none;
+}
+
+#coverflow-socialwall .Lightbox {
+    display: none;
+}
+
+#coverflow-socialwall li:nth-child(2) .text,
+#coverflow-socialwall li:nth-child(-n+1) .text,
+#coverflow-socialwall li:nth-child(n+3) .text {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+@media (max-width: 479px) {
+    #coverflow-stories,
+    #coverflow-socialwall {
+        max-width: 100% !important;
+    }
+
+    #coverflow-stories .covers {
+        width: 105% !important;
+    }
+}

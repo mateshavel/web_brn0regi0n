@@ -1,0 +1,664 @@
+a.lang_cz:before {
+    font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    color: #869196;
+    content: "/";
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+a.btn-hide {
+    padding: 0 25px 2px 5px;
+    height: 50px;
+}
+
+a.btn-hide:after {
+    font-family: 'Glyphicons Halflings', sans-serif;
+    content: "\e081";
+    color: #869196;
+    position: absolute;
+    top: 23px;
+    left: 49px;
+    transform: rotate(45deg);
+    background: none;
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+a.btn-hide:hover:after {
+    top: -2px;
+    left: 60px;
+}
+
+a.btn-toolbox {
+    background: #1e2941;
+    color: #fff;
+    border-right: 5px solid #1e2941;
+    padding-left: 10px;
+}
+
+a.btn-toolbox:focus {
+    color: #fff;
+}
+
+a.btn-toolbox span {
+    color: #d91416;
+    padding-right: 3px;
+}
+
+a.btn-toolbox:after {
+    all: unset;
+}
+/* BEGIN IOS doubleclick */
+a.link.no-transition:after {
+    all: unset !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+    content: none !important;
+    display: inline-block !important;
+}
+
+a.link.no-transition {
+    text-decoration: underline !important;
+    text-decoration-color: #d91416 !important;
+    -webkit-text-decoration-color: #d91416 !important;
+}
+
+a.link.no-transition.btn-hide {
+    text-decoration: none !important;
+    text-decoration-color: transparent !important;
+    -webkit-text-decoration-color: transparent !important;
+}
+
+a.link.no-transition.btn-hide:after {
+    font-family: 'Glyphicons Halflings', sans-serif !important;
+    content: "\e081" !important;
+    color: #869196 !important;
+    position: absolute !important;
+    top: 2px !important;
+    left: 49px !important;
+    transform: rotate(45deg) !important;
+    background: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+.header-menu a.no-transition {
+    text-decoration: none !important;
+    text-decoration-color: transparent !important;
+    -webkit-text-decoration-color: transparent !important;
+}
+/* END IOS doubleclick */
+
+a.mailto {
+    font-size: 16px;
+    color: #027eff;
+    text-decoration: underline;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: transparent;
+    color: #1e2941 !important;
+}
+
+.jic-book {
+    position: relative;
+}
+
+.jic-book strong {
+    color: #1e2941;
+}
+
+.jic-book .logo {
+    transform: rotate(210deg);
+}
+
+.jic-book .header-menu {
+    margin-top: 50px;
+}
+
+.jic-book .page-header {
+    border-bottom: none;
+    color: #1e2941;
+}
+
+.jic-book .page-header .container-fluid {
+    background: transparent url("../../JIC/media/Images/toolbox/toolkit-book-bg.png") top center no-repeat;
+    background-size: cover;
+    height: 537px;
+    max-width: 1434px;
+    text-align: center;
+}
+
+.jic-book .page-header .container-fluid h1 {
+    margin-top: 10%;
+}
+
+.jic-book .page-header .container-fluid h1 small {
+    font-family: 'Work Sans',Helvetica,Arial,sans-serif;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1e2941;
+    display: block;
+    margin-top: -10px;
+}
+
+.jic-book .main-menu-affix.affix {
+     position: fixed;
+     width: auto;
+     top: 20px;
+}
+
+.jic-book .main-menu-affix.affix-top {
+    position: static;
+    width: auto;
+}
+
+.jic-book .sidebar-nav li {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: 18px;
+}
+/* Toggle sub-navigation */
+.jic-book .sidebar-nav li .nav {
+    height: 0;
+    opacity: 0;
+    -webkit-transition: opacity 50ms ease-in;
+    -moz-transition: opacity 50ms ease-in;
+    -o-transition: opacity 50ms ease-in;
+    transition: opacity 50ms ease-in;
+}
+
+.jic-book .sidebar-nav li.active .nav {
+    height: auto;
+    opacity: 1;
+}
+
+.jic-book .sidebar-nav .nav li > a:before {
+    position: absolute;
+    color: #869196;
+    content: "|";
+    font-size: 22px;
+    font-weight: 100;
+    margin-top: -6px;
+    left: 15px;
+}
+
+.jic-book .sidebar-nav .nav li.active > a:before {
+    position: absolute;
+    color: #d91416;
+    content: "|";
+    font-size: 22px;
+    margin-top: -6px;
+    left: 15px;
+}
+
+.jic-book .sidebar-nav .nav li.active > a {
+    color: #1e2941 !important;
+}
+
+.jic-book .sidebar-nav li a {
+    color: #1e2941;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.jic-book .sidebar-nav .nav > li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.jic-book .sidebar-nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 310px;
+    line-height: 1.3;
+    color: #869196;
+}
+
+.jic-book .toolbox-readmore {
+    -webkit-box-shadow: 0 -15px 109px 10px rgba(255,255,255,1);
+    -moz-box-shadow: 0 -15px 109px 10px rgba(255,255,255,1);
+    box-shadow: 0 -15px 109px 10px rgba(255,255,255,1);
+    position: relative;
+    padding-bottom: 90px;
+}
+
+.jic-book .toolbox-readmore.no-collapse {
+    box-shadow: none;
+}
+
+.jic-book section {
+    padding-top: 17%;
+}
+
+.jic-book section p:last-child {
+    margin-bottom: 0;
+}
+
+.jic-book section h2 {
+    font-size: 4.3rem;
+}
+
+.jic-book section h3 {
+    font-size: 2.8rem;
+    padding-top: 0;
+}
+
+.jic-book section h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8rem;
+    padding-top: 0;
+    color: #1e2941;
+}
+
+.jic-book section a.btn-toolbox {
+    padding: 10px 0 10px 10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.jic-book section#jic-what {
+    background: transparent url("../../JIC/media/Images/toolbox/what-bg.png") top left no-repeat;
+}
+
+.jic-book section#jic-why {
+    background: transparent url("../../JIC/media/Images/toolbox/why-bg.png") top left no-repeat;
+}
+
+.jic-book section#jic-how {
+    background: transparent url("../../JIC/media/Images/toolbox/how-bg.png") top left no-repeat;
+}
+
+.jic-book section#jic-materials {
+    background: transparent url("../../JIC/media/Images/toolbox/materials-bg.png") top left no-repeat;
+    background-size: contain;
+}
+
+.jic-book section#jic-contact {
+    background: transparent url("../../JIC/media/Images/toolbox/contact-bg.png") top left no-repeat;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.jic-book section#jic-what h2 {
+    margin-top: 35px;
+}
+
+.jic-book section#jic-why h2 {
+    margin-top: 46px;
+}
+
+.jic-book section#jic-how h2 {
+    margin-top: 36px;
+}
+
+.jic-book .image-region {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.jic-book .image-region .panel {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.jic-book .image-region .panel-heading {
+    background: none;
+}
+
+.jic-book .image-region .panel-heading h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 2px;
+    padding-bottom: 0;
+}
+
+.jic-book .image-region .panel-heading h3 a {
+    text-decoration: none;
+}
+
+.jic-book .image-region .panel-heading h3 a span.btn-expand {
+    transform: rotate(45deg);
+}
+
+.jic-book .image-region .panel-heading h3 a[aria-expanded="true"] span.btn-expand:after {
+    color: #869196;
+    content: "\e081";
+    margin-right: -5px;
+}
+
+.jic-book .image-region .panel-heading h3 a[aria-expanded="false"] span.btn-expand:after {
+    content: "\e088";
+    color: #d91416;
+    margin-right: -5px;
+}
+
+.jic-book .image-region .panel-collapse .list-group-item {
+    font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.jic-book-images {
+    margin-top: 70px;
+}
+
+.jic-book-images img {
+    display: block;
+}
+
+.jic-book-images img:nth-of-type(1) {
+    position: absolute;
+    z-index: 100;
+    left: -2px;
+    margin-top: 100px;
+}
+
+.jic-book-images img:nth-of-type(2) {
+    position: absolute;
+    z-index: 99;
+    right: 50px;
+}
+
+.jic-book-images img:nth-of-type(3) {
+    position: relative;
+    z-index: 100;
+    left: -17px;
+    top: 324px;
+}
+
+.jic-book-images img:nth-of-type(4) {
+    position: absolute;
+    right: -2px;
+    margin-top: 130px;
+}
+
+.jic-book-video {
+    margin-top: 400px;
+}
+
+.jic-book-video .banner-image-block {
+    height: auto;
+    width: 100%;
+    max-height: 345px;
+    -webkit-box-shadow: 0 10px 61px -9px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0 10px 61px -9px rgba(0,0,0,0.41);
+    box-shadow: 0 10px 61px -9px rgba(0,0,0,0.41);
+}
+
+.jic-book-video .banner-image-block img {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.jic-book-video .videoBlock iframe {
+    position: static;
+}
+
+.jic-book-video p {
+    color: #1e2941;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+/* Bootstrap partial collapse */
+.jic-book div.partial-collapse.collapse[aria-expanded="false"] {
+    display: block;
+    height: 100px !important;
+    overflow: hidden;
+}
+
+.jic-book div.partial-collapse.collapse[aria-expanded="true"] + div.toolbox-readmore {
+    box-shadow: none;
+}
+
+.jic-book div.partial-collapse.collapsing[aria-expanded="false"] {
+    height: 100px !important;
+}
+
+/* Media queries */
+@media (min-width: 1025px) {
+    .jic-book .page-header .container-fluid {
+        height: 537px !important;
+    }
+
+    .jic-book section#jic-materials h2 {
+        margin-top: -34px;
+    }
+
+    .jic-book section#jic-contact h2 {
+        margin-top: -48px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .jic-book .page-header .container-fluid {
+        height: 405px;
+    }
+
+    .jic-book-video .banner-image-block {
+        max-height: 284px;
+    }
+}
+
+@media (max-width: 991px) {
+    .jic-book .page-header .container-fluid {
+        height: 302px;
+    }
+
+    .jic-book-video .banner-image-block {
+        max-height: 330px;
+    }
+
+    /* IOS avoid clicking twice */
+    .jic-book .header-menu a:after {
+        all: unset;
+    }
+}
+
+@media (max-width: 575px) {
+    .jic-book .page-header .container-fluid {
+        height: 180px;
+    }
+
+    .jic-book-video .banner-image-block {
+        max-height: 181px;
+    }
+
+    .jic-book-images img:nth-of-type(2) {
+        left: 0;
+    }
+
+    .jic-book-images img:nth-of-type(4) {
+        right: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .jic-book .page-header .container-fluid {
+        height: 260px;
+    }
+
+    .jic-book-video .banner-image-block {
+        max-height: 159px;
+    }
+}
+
+@media (max-width: 320px) {
+    .jic-book-video .banner-image-block {
+        max-height: 132px;
+    }
+}
+
+/* JIC BOOK OVERLAY */
+
+/*# Close btn #*/
+
+.mt-10 {
+    margin-top: 100px
+}
+
+span.close-back{
+    z-index: 20;
+}
+
+.close-back {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    float: right;
+    opacity: 1;
+
+    position: absolute;
+    top: 120px;
+    right: 80px;
+}
+
+.close-back::before, .close-back::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #b0bec5;
+}
+
+.close-back::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.close-back::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 1199px) {
+    .close-back {
+        top: 110px;
+    }
+}
+
+@media (max-width: 767px) {
+    .close-back {
+        top: 35px;
+        right: 35px;
+    }
+}
+
+@media (max-width: 425px) {
+    .close-back {
+        top: 35px;
+        right: 35px;
+    }
+}
+
+/*# brnoregion book overlay #*/
+.bc-book-overlay h1 {
+    font-size: 60px;
+    color: rgb(30, 41, 65);
+    margin-bottom: 2rem;
+    text-align: left;
+    line-height: 1.1;
+}
+@media (max-width: 767px) {
+    .bc-book-overlay h1 {
+        text-align: center;
+    }
+}
+
+.bc-book-overlay p {
+    font-size: 16px;
+    color: #1e2941;
+    margin: 0 0 40px;
+}
+
+.bc-book-overlay strong {
+    font-size: 16px;
+    color: #1e2941;
+}
+
+.bc-book-overlay a,
+.bc-book-overlay li a {
+    font-size: 16px;
+    color: #027eff;
+    text-decoration: underline;
+}
+
+.bc-book-overlay a:hover,
+.bc-book-overlay li a:hover {
+    font-size: 16px;
+    color: #027eff;
+}
+
+.bc-book-overlay h2 {
+    font-size: 32px;
+    color: #1e2941;
+}
+
+.bc-book-overlay h3 {
+    font-size: 26px;
+    color: #1e2941;
+    padding-top: 30px;
+}
+
+.bc-book-overlay h3:before {
+    content: '♦';
+    color: #d91416;
+    position: absolute;
+    left: 15px;
+    font-size: 17px;
+}
+
+.bc-book-overlay img {
+    margin-bottom: 3rem;
+}
+
+.bc-book-overlay span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e2941;
+}
+
+.bc-book-overlay .content-book-overlay {
+}
+
+.bc-book-overlay .list-book-overlay p,
+.bc-book-overlay .list-book-overlay h3,
+.bc-book-overlay .list-book-overlay ul {
+    padding-left: 17px;
+}
+
+/* IE Fixes */
+/*
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .link.btn-hide::after {
+        background: none;
+        transition: none;
+    }
+}*/
